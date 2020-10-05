@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "MS_KaiTi";
+  src: url("./ms_kaiti.ttf");
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 210mm;
+  height: 296mm;
+}
+body {
+  background-image: url("./ch_bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@media print {
+  body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+  }
+  #toolbar,
+  #dragger {
+    display: none;
+  }
+  .writer,
+  .writer.current,
+  .writer:focus {
+    outline-width: 0px;
+    outline: none !important;
+  }
+  .writer {
+    color: #f8f8f8 !important;
+  }
+}
+
+@page {
+  margin: 0;
+}
+
+#bg {
+  width: 100%;
+  height: 100%;
+}
+#toolbar {
+  text-align: center;
+}
+#toolbar a {
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+#dragger {
+  position: absolute;
+}
+#btn_move {
+  cursor: move;
+}
+.btn_modify {
+  cursor: pointer;
+}
+
+.writer {
+  font-family: "MS_KaiTi";
+  font-size: 24px;
+  position: absolute;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  color: darkslateblue;
+  caret-color: red;
+  min-height: 30px;
+  min-width: 80px;
+}
+
+.writer.current,
+.writer:focus {
+  outline: 1px solid lightskyblue;
+}
+
+#writer {
+  font-family: "MS_KaiTi";
+  font-size: 44px;
+  position: absolute;
+  top: 132px;
+  left: 146px;
+  letter-spacing: 3.5px;
+  line-height: 86px;
+  outline: none;
+  caret-color: red;
+}
+.ch {
+  position: absolute;
+  top: 150px;
+  left: 146px;
+  width: 49px;
+  height: 52px;
+  background: red;
+}
